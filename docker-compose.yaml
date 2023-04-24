@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  distance-calculator:
+    platform: linux/arm64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: ["8000:8000"]
+    environment:
+      API_USERNAME: user
+      API_PASSWORD: pass
